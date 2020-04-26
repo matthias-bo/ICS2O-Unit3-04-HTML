@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>3-04 webpage </title>
+    <meta charset="utf-8">
+    <meta name="description" content="My math webpage">
+    <meta name="keywords" content="Math">
+    <meta name="author" content="Matthias Bo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="trapezoids.css">
+    </head>
+    <body>
+    <h1>Matthias's area of a trapezoid calculator</h1>
+    <p>Put base a, base b and the height of the trapezoid into the boxes</p>
+    <img src="./images/trapezoid.PNG">
+    <br>
+    <p><i>Base a</i></p>
+    <input type="text" id="a">
+    <p><i>Base b</i></p>
+    <input type="text" id="b">
+    <p><i>Height</i></p>
+    <input type="text" id="height">
+    <br>
+    <br>
+    <button id="trapezoidarea">Submit</button>
+    <script>
+    let baseA;
+    let baseB;
+    let height;
+    let area;
+
+    document.getElementById("trapezoidarea").addEventListener("click", myfunction);
+    function myfunction() {
+    baseA = document.getElementById("a").value;
+    baseB = document.getElementById("b").value;
+    height = document.getElementById("height").value;
+    baseA = +baseA;
+    baseB = +baseB;
+    height = +height;
+    area=[(baseA+baseB)/2]*height;
+    alert(area);
+}
+    </script>
+    </body>
+  </html>
